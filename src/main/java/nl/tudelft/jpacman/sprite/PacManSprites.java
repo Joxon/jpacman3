@@ -11,7 +11,7 @@ import nl.tudelft.jpacman.npc.ghost.GhostColor;
 /**
  * Sprite Store containing the classic Pac-Man sprites.
  *
- * @author Jeroen Roosen 
+ * @author Jeroen Roosen
  */
 public class PacManSprites extends SpriteStore {
 
@@ -75,10 +75,8 @@ public class PacManSprites extends SpriteStore {
     /**
      * Returns a new map with animations for all directions.
      *
-     * @param resource
-     *            The resource name of the sprite.
-     * @param frames
-     *            The number of frames in this sprite.
+     * @param resource The resource name of the sprite.
+     * @param frames   The number of frames in this sprite.
      * @return The animated sprite facing the given direction.
      */
     private Map<Direction, Sprite> directionSprite(String resource, int frames) {
@@ -100,8 +98,7 @@ public class PacManSprites extends SpriteStore {
     /**
      * Returns a map of animated ghost sprites for all directions.
      *
-     * @param color
-     *            The colour of the ghost.
+     * @param color The colour of the ghost.
      * @return The Sprite for the ghost.
      */
     public Map<Direction, Sprite> getGhostSprite(GhostColor color) {
@@ -133,11 +130,32 @@ public class PacManSprites extends SpriteStore {
         return loadSprite("/sprite/pellet.png");
     }
 
+    public Sprite getAppleSprite() {
+        return loadSprite("/sprite/apple.png");
+    }
+
+    public Sprite getCherrySprite() {
+        return loadSprite("/sprite/cherry.png");
+    }
+
+    public Sprite getMelonSprite() {
+        return loadSprite("/sprite/melon.png");
+    }
+
+    public Sprite getOrangeSprite() {
+        return loadSprite("/sprite/orange.png");
+    }
+
+    public Sprite getStrawberrySprite() {
+        return loadSprite("/sprite/strawberry.png");
+    }
+
+
     /**
      * Overloads the default sprite loading, ignoring the exception. This class
      * assumes all sprites are provided, hence the exception will be thrown as a
      * {@link RuntimeException}.
-     *
+     * <p>
      * {@inheritDoc}
      */
     @Override
